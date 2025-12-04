@@ -1,17 +1,32 @@
 {
-  "name": "stored-list",
-  "version": "0.0.0",
-  "private": true,
+  "name": "favorite-snacks-list",
+  "version": "1.0.0",
+  "description": "A stored list of favorite snacks",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "hbs": "^4.2.0",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
-  }
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b444a/stored-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/b444a/stored-list/issues"
+  },
+  "homepage": "https://github.com/b444a/stored-list#readme"
 }

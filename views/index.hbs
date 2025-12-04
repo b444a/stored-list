@@ -1,7 +1,14 @@
-<h1>Express</h1>
-<ul>
-{{#each list}}
-<li>{{this}}</li>
-{{/each}}
-</ul>
-
+<div class="container">
+    <h1>🍿 My Favorite Snacks</h1>
+    
+    <div class="snacks-list">
+        {{#each snacks}}
+            <div class="snack-item">
+                <span class="snack-name">{{this.name}}</span>
+                <span class="snack-category">{{this.category}}</span>
+            </div>
+        {{else}}
+            <p class="no-snacks">No snacks found!</p>
+        {{/each}}
+    </div>
+</div>
