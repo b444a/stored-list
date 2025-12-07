@@ -1,22 +1,25 @@
+
+
 const express = require('express');
 const router = express.Router();
-const Snack = require('../models/snacks');
+const Snack = require('../models/snack');
 
-/* GET home page. */
-router.get('/', async (req, res, next) => {
+
+
+router.get('/', async (req, res) => {
+  console.log("ROUTE REACHED");
   try {
-    // Get all snacks from the database
     const snacks = await Snack.find();
-    
-    // Render the home page with the snacks data
-    res.render('home', {
-      title: 'My Favorite Snacks',
-      snacks: snacks
-    });
-  } catch (error) {
-    console.error('Error fetching snacks:', error);
-    res.status(500).send('Error loading snacks');
+
+    console.log("Snacks loaded:", snacks); 
+
+    res.render('index.hbs', { snacks });
+
+  } catch (err) {
+    console.error("Snack load error:", err);
+    res.send("Error loading snacks");
   }
 });
 
 module.exports = router;
+
