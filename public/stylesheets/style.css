@@ -86,3 +86,113 @@ h1 {
       align-items: flex-start;
   }
 }
+/* Add Snack Form */
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #f5f7fa;
+  font-size: 1em;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease;
+  font-weight: 600;
+}
+
+.add-btn {
+  background: #667eea;
+}
+
+.add-btn:hover {
+  background: #5466c9;
+  transform: translateY(-2px);
+}
+
+/* Snack Item layout upgrade */
+.snack-item {
+  padding: 20px;
+  border-left: 6px solid #667eea;
+  background: linear-gradient(135deg, #f0f2f5 0%, #d7dce6 100%);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.snack-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Edit/Delete Inputs */
+.edit-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.edit-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+
+/* Buttons for edit & delete */
+.edit-btn {
+  background: #4caf50;
+}
+
+.edit-btn:hover {
+  background: #3d8d42;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #e74c3c;
+  padding: 10px 18px;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Button row */
+.action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container {
+  max-width: 900px;      /* Wider than before to fit buttons */
+  width: 90%;            /* Responsive width */
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.snack-category {
+  background: #667eea;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-left: 12px;   /* <-- Add this spacing */
+  display: inline-block;
+}

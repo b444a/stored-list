@@ -1,14 +1,42 @@
 <div class="container">
+
     <h1>🍿 My Favorite Snacks</h1>
-    
+
+    <!-- ADD NEW SNACK FORM -->
+    <form action="/item" method="POST" class="add-form">
+        <input type="text" name="name" placeholder="Snack name..." required>
+        <input type="text" name="category" placeholder="Category..." required>
+        <button type="submit" class="btn add-btn">Add Snack</button>
+    </form>
+
     <div class="snacks-list">
         {{#each snacks}}
             <div class="snack-item">
-                <span class="snack-name">{{this.name}}</span>
-                <span class="snack-category">{{this.category}}</span>
+
+                <div class="snack-info">
+                    <span class="snack-name">{{this.name}}</span>
+                    <span class="snack-category">{{this.category}}</span>
+                </div>
+
+                <div class="action-row">
+
+                    <!-- EDIT SNACK -->
+                    <form action="/item/{{this._id}}?_method=PUT" method="POST" class="edit-form">
+                        <input type="text" name="name" placeholder="Edit name..." required>
+                        <input type="text" name="category" placeholder="Edit category..." required>
+                        <button type="submit" class="btn edit-btn">Update</button>
+                    </form>
+
+                    <!-- DELETE SNACK -->
+                    <form action="/item/{{this._id}}?_method=DELETE" method="POST">
+                        <button type="submit" class="btn delete-btn">Delete</button>
+                    </form>
+
+                </div>
             </div>
         {{else}}
-            <p class="no-snacks">No snacks found!</p>
+            <p class="no-snacks">No snacks found! Add your first one above 👆</p>
         {{/each}}
     </div>
+
 </div>
